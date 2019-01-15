@@ -27,20 +27,13 @@ namespace UnitTestProject1
         public void FirstTest()
         {
             Login();
-            //var element= driver.FindElement(By.CssSelector(".product.column.shadow.hover-light"));
-            //var sticker = element.FindElement(By.CssSelector(".sticker"));
-            //Assert.NotNull(sticker);
 
-            var elements = driver.FindElements(By.CssSelector(".product.column.shadow.hover-light"));
+            var elements = driver.FindElements(By.CssSelector(".product"));
             foreach (var element in elements)
             {
                 var sticker = element.FindElements(By.CssSelector(".sticker"));
                 Assert.NotNull(sticker);
             }
-
-
-          
-
 
         }
 
