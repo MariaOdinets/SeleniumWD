@@ -37,7 +37,7 @@ namespace UnitTestProject1
                 int currentQuantity = GetQuantity();
 
                 WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(3));
-                wait.Until(webDriver => currentQuantity == quantity + 1);
+                wait.Until(webDriver => GetQuantity() == quantity + 1);
                 i++;
             }
 
